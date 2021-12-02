@@ -296,7 +296,4 @@
       padding-top: 150px;
   }
 
-  .mountains-bottom {
-    display: flex;
-  }
 </style>

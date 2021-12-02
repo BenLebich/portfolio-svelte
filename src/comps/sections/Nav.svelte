@@ -1,8 +1,8 @@
 <script>
   import { slide } from "svelte/transition";
-  export let innerWidth;
   let heightArrow = 190;
   let hover = false;
+  let h = 0;
   $: if (!hover) {
     heightArrow = 25;
   } else {
@@ -20,24 +20,27 @@
   }
 
   function leave(e) {
-    hover = false
+    hover = false;
   }
 
   function click(e) {
-      console.log(hover)
-      hover = !hover;
+    hover = !hover;
   }
-
 </script>
 
 <header class="container">
   <img src="/images/xl-logo.png" alt="Ben Lebich Logo" class="main-logo" />
   <div>
-    <div class="menu" on:mouseenter={enter} on:mouseleave={leave} on:click={click}>
-      <div class="sections">
+    <div
+      class="menu"
+      on:mouseenter={enter}
+      on:mouseleave={leave}
+      on:click={click}
+    >
+      <div class="sections" bind:clientHeight={h}>
         {#each sections as section, idx}
           {#if section === selected}
-            <div
+            <div 
               on:click={handleClick}
               data-idx={idx}
               class="{section.toLowerCase()} {section === selected
@@ -48,7 +51,7 @@
             </div>
           {:else if hover}
             <div
-            transition:slide
+              transition:slide
               on:click={handleClick}
               data-idx={idx}
               class="{section.toLowerCase()} {section === selected
@@ -60,7 +63,7 @@
           {/if}
         {/each}
       </div>
-      <div class="arrow">
+      <div class="arrow" style="display: none;">
         <svg
           width="18"
           height={heightArrow + 15}
@@ -77,11 +80,52 @@
           />
         </svg>
       </div>
+      <div class="arrow">
+        <svg
+          class="arrow-body"
+          width="6"
+          height={h}
+          viewBox="0 0 6 236"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+        >
+          <line
+            x1="3"
+            y1="1.31134e-07"
+            x2="2.99999"
+            y2="236"
+            stroke="#171717"
+            stroke-width="6"
+          />
+        </svg>
+        <svg
+          class="arrow-head"
+          width="24"
+          height="20"
+          viewBox="0 0 24 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M12 20L0.741669 0.5H23.2583L12 20Z" fill="#171717" />
+        </svg>
+      </div>
     </div>
   </div>
 </header>
 
 <style>
+  .arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50%;
+  }
+
+  .arrow-head {
+    margin-top: -1px;
+  }
+
   .main-logo {
     max-width: 400px;
     height: 100%;
@@ -101,6 +145,7 @@
     position: fixed;
     margin-left: -122.5px;
     z-index: 5;
+    align-items: flex-start;
   }
 
   .sections {
