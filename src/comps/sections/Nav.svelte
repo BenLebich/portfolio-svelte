@@ -1,5 +1,9 @@
 <script>
+export let innerWidth;
   let heightArrow = 190;
+  if (innerWidth <= 775) {
+      heightArrow = 25;
+  }
   let selected = "Home";
   let sections = ["Home", "About", "Career", "Project", "Contact"];
 
@@ -14,15 +18,28 @@
     <div class="menu">
       <div class="sections">
         {#each sections as section, idx}
+          {#if innerWidth <= 775 && section === selected}
           <div
-            on:click={handleClick}
-            data-idx={idx}
-            class="{section.toLowerCase()} {section === selected
-              ? 'active'
-              : ''}"
-          >
-            {section}
-          </div>
+          on:click={handleClick}
+          data-idx={idx}
+          class="{section.toLowerCase()} {section === selected
+            ? 'active'
+            : ''}"
+        >
+          {section}
+        </div>
+          {:else if innerWidth > 775}
+          <div
+          on:click={handleClick}
+          data-idx={idx}
+          class="{section.toLowerCase()} {section === selected
+            ? 'active'
+            : ''}"
+        >
+          {section}
+        </div>
+          {/if}
+          
         {/each}
       </div>
       <div class="arrow">
@@ -48,7 +65,7 @@
 
 <style>
   .main-logo {
-    width: 400px;
+    max-width: 400px;
     height: fit-content;
   }
 
@@ -81,5 +98,11 @@
   .sections .active {
     color: #ffffff;
     background-color: #171717;
+  }
+
+  @media only screen and (max-width: 775px) {
+    .main-logo {
+    max-width: 200px;
+  } 
   }
 </style>

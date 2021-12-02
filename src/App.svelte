@@ -11,7 +11,7 @@
 </script>
 
 <main>
-	<Nav/>
+	<Nav innerWidth={innerWidth}/>
 	<Hero/>
 	<About y={y} innerWidth={innerWidth}/>
 </main>
