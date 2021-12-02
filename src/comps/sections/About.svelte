@@ -15,7 +15,7 @@
 </script>
 
 <section>
-  <div class="mountains-top">
+  <div class="mountains">
     <div class="range lighter" style="margin-left: {leftLight}px">
       <svg
         width="2500"
@@ -137,8 +137,8 @@
         <AboutContent />
     </div>
   </div>
-  <div class="mountains-top" style="transform: scale(1,-1)">
-    <div class="range lighter" style="margin-left: -{leftLight}px">
+  <div class="mountains bottom" style="transform: scale(1,-1)">
+    <div class="range lighter" style="margin-left: -{leftLight - 400}px">
       <svg
         width="2500"
         height="382"
@@ -196,7 +196,7 @@
         </svg>
       {/if}
     </div>
-    <div class="range darker" style="margin-left: {leftDark}px; z-index: 2;">
+    <div class="range darker" style="margin-left: {leftDark - 400}px; z-index: 2;">
       <svg
         width="2500"
         height="382"
@@ -258,7 +258,7 @@
 </section>
 
 <style>
-  .mountains-top {
+  .mountains {
     padding-top: 200px;
     width: 100vw;
     position: relative;
@@ -267,29 +267,33 @@
     flex-direction: column;
     align-items: center;
   }
-  .mountains-top .range {
+  .mountains .range {
     width: 300%;
     height: 150px;
     display: flex;
     flex-direction: row;
   }
-  .mountains-top .lighter {
+  .mountains .lighter {
       height: 200px;
   }
-  .mountains-top svg {
+  .mountains svg {
     width: 300%;
     height: 150px;
   }
-  .mountains-top .lighter svg {
+  .mountains .lighter svg {
       height: 200px;
   }
-  .mountains-top .darker {
+  .mountains .darker {
     margin-top: -150px;
   }
   .content {
     text-align: center;
     background-color: #dd6031;
     padding: 200px 100px;
+  }
+
+  .bottom {
+      padding-top: 150px;
   }
 
   .mountains-bottom {

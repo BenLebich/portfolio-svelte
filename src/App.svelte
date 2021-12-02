@@ -12,8 +12,9 @@
 
 <main>
 	<Nav innerWidth={innerWidth}/>
-	<Hero/>
+	<Hero />
 	<About y={y} innerWidth={innerWidth}/>
+	<Career innerWidth={innerWidth}/>
 </main>
 
 <svelte:window bind:scrollY={y} bind:innerWidth={innerWidth}/>

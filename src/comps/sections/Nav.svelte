@@ -1,8 +1,10 @@
 <script>
   export let innerWidth;
   let heightArrow = 190;
-  if (innerWidth <= 775) {
+  $: if (innerWidth <= 775) {
     heightArrow = 25;
+  } else {
+    heightArrow = 190;
   }
   let selected = "Home";
   let sections = ["Home", "About", "Career", "Project", "Contact"];
@@ -93,6 +95,11 @@
     font-size: 25px;
     padding: 2px 7px;
     cursor: pointer;
+  }
+
+  .sections div:hover {
+    text-decoration: underline;
+    text-decoration-color: #dd6031;
   }
 
   .sections .active {

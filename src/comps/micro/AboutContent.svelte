@@ -2,7 +2,7 @@
   import SectionTitle from "./SectionTitle.svelte";
 </script>
 
-<SectionTitle />
+<SectionTitle title="About"/>
 <div class="content">
   <img src="/images/me.png" alt="Ben Lebich Hiking" />
   <div class="desc">
