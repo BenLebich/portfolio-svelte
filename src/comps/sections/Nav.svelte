@@ -1,7 +1,9 @@
 <script>
   import { slide } from "svelte/transition";
+  export let innerWidth;
   let heightArrow = 190;
   let hover = false;
+  
   let h = 0;
   $: if (!hover) {
     heightArrow = 25;
@@ -63,53 +65,8 @@
           {/if}
         {/each}
       </div>
-      <div class="arrow" style="display: none;">
-        <svg
-          width="18"
-          height={heightArrow + 15}
-          viewBox="0 0 18 {heightArrow + 15}"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M9 {heightArrow +
-              15}L17.6603 {heightArrow}L0.339745 {heightArrow}L9 {heightArrow +
-              15}ZM7.5 -6.55671e-08L7.5 {heightArrow + 1.5}L10.5 {heightArrow +
-              1.5}L10.5 6.55671e-08L7.5 -6.55671e-08Z"
-            fill="#171717"
-          />
-        </svg>
-      </div>
-      <div class="arrow">
-        <svg
-          class="arrow-body"
-          width="6"
-          height={h}
-          viewBox="0 0 6 236"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-        >
-          <line
-            x1="3"
-            y1="1.31134e-07"
-            x2="2.99999"
-            y2="236"
-            stroke="#171717"
-            stroke-width="6"
-          />
-        </svg>
-        <svg
-          class="arrow-head"
-          width="24"
-          height="20"
-          viewBox="0 0 24 20"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M12 20L0.741669 0.5H23.2583L12 20Z" fill="#171717" />
-        </svg>
-      </div>
+
+     
     </div>
   </div>
 </header>
@@ -143,13 +100,12 @@
     display: flex;
     flex-direction: row;
     position: fixed;
-    margin-left: -122.5px;
+    margin-left: -87px;
     z-index: 5;
     align-items: flex-start;
   }
 
   .sections {
-    margin-right: 20px;
     background-color: #ffffff88;
     display: flex;
     flex-direction: column;
