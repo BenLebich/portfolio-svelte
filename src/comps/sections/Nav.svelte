@@ -1,8 +1,8 @@
 <script>
-export let innerWidth;
+  export let innerWidth;
   let heightArrow = 190;
   if (innerWidth <= 775) {
-      heightArrow = 25;
+    heightArrow = 25;
   }
   let selected = "Home";
   let sections = ["Home", "About", "Career", "Project", "Contact"];
@@ -19,27 +19,26 @@ export let innerWidth;
       <div class="sections">
         {#each sections as section, idx}
           {#if innerWidth <= 775 && section === selected}
-          <div
-          on:click={handleClick}
-          data-idx={idx}
-          class="{section.toLowerCase()} {section === selected
-            ? 'active'
-            : ''}"
-        >
-          {section}
-        </div>
+            <div
+              on:click={handleClick}
+              data-idx={idx}
+              class="{section.toLowerCase()} {section === selected
+                ? 'active'
+                : ''}"
+            >
+              {section}
+            </div>
           {:else if innerWidth > 775}
-          <div
-          on:click={handleClick}
-          data-idx={idx}
-          class="{section.toLowerCase()} {section === selected
-            ? 'active'
-            : ''}"
-        >
-          {section}
-        </div>
+            <div
+              on:click={handleClick}
+              data-idx={idx}
+              class="{section.toLowerCase()} {section === selected
+                ? 'active'
+                : ''}"
+            >
+              {section}
+            </div>
           {/if}
-          
         {/each}
       </div>
       <div class="arrow">
@@ -68,7 +67,6 @@ export let innerWidth;
     max-width: 400px;
     height: 100%;
     object-fit: cover;
-
   }
 
   header {
@@ -83,7 +81,7 @@ export let innerWidth;
     flex-direction: row;
     position: fixed;
     margin-left: -122.5px;
-    z-index: 5
+    z-index: 5;
   }
 
   .sections {
@@ -104,7 +102,7 @@ export let innerWidth;
 
   @media only screen and (max-width: 775px) {
     .main-logo {
-    max-width: 200px;
-  } 
+      max-width: 200px;
+    }
   }
 </style>
