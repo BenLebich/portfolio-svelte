@@ -1,29 +1,25 @@
 <script>
-	export let name;
+
+	import Nav from './comps/sections/Nav.svelte';
+	import Hero from './comps/sections/Hero.svelte';
+	import About from './comps/sections/About.svelte';
+	import Career from './comps/sections/Career.svelte';
+	import Projects from './comps/sections/Projects.svelte';
+	import Contact from './comps/sections/Contact.svelte';
+	let y = 0;
+	let innerWidth = 0;
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
+	<Nav/>
+	<Hero/>
+	<About y={y} innerWidth={innerWidth}/>
 </main>
+
+<svelte:window bind:scrollY={y} bind:innerWidth={innerWidth}/>
 
 <style>
 	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
+		height: 10000px;
 	}
 </style>
