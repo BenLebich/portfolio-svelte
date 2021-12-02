@@ -151,6 +151,9 @@
   .sections {
     margin-right: 20px;
     background-color: #ffffff88;
+    display: flex;
+    flex-direction: column;
+    width: 87px;
   }
 
   .sections div {
