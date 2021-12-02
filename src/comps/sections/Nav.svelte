@@ -66,7 +66,9 @@ export let innerWidth;
 <style>
   .main-logo {
     max-width: 400px;
-    height: min-content;
+    height: 100%;
+    object-fit: cover;
+
   }
 
   header {
