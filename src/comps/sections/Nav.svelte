@@ -1,7 +1,9 @@
 <script>
+  import { slide } from "svelte/transition";
   export let innerWidth;
   let heightArrow = 190;
-  $: if (innerWidth <= 775) {
+  let hover = false;
+  $: if (!hover) {
     heightArrow = 25;
   } else {
     heightArrow = 190;
@@ -12,15 +14,29 @@
   function handleClick(e) {
     selected = sections[e.target.getAttribute("data-idx")];
   }
+
+  function enter(e) {
+    hover = true;
+  }
+
+  function leave(e) {
+    hover = false
+  }
+
+  function click(e) {
+      console.log(hover)
+      hover = !hover;
+  }
+
 </script>
 
 <header class="container">
   <img src="/images/xl-logo.png" alt="Ben Lebich Logo" class="main-logo" />
   <div>
-    <div class="menu">
+    <div class="menu" on:mouseenter={enter} on:mouseleave={leave} on:click={click}>
       <div class="sections">
         {#each sections as section, idx}
-          {#if innerWidth <= 775 && section === selected}
+          {#if section === selected}
             <div
               on:click={handleClick}
               data-idx={idx}
@@ -30,8 +46,9 @@
             >
               {section}
             </div>
-          {:else if innerWidth > 775}
+          {:else if hover}
             <div
+            transition:slide
               on:click={handleClick}
               data-idx={idx}
               class="{section.toLowerCase()} {section === selected
