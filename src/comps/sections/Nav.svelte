@@ -1,6 +1,7 @@
 <script>
   import { slide } from "svelte/transition";
-  export let innerWidth;
+  //export let innerWidth;
+  export let y;
   let heightArrow = 190;
   let hover = false;
   
@@ -35,6 +36,7 @@
   <div>
     <div
       class="menu"
+      style="{(y < 30) ? "" : "position: fixed; margin-top: -30px;"}"
       on:mouseenter={enter}
       on:mouseleave={leave}
       on:click={click}
@@ -99,7 +101,6 @@
   .menu {
     display: flex;
     flex-direction: row;
-    position: fixed;
     margin-left: -87px;
     z-index: 5;
     align-items: flex-start;

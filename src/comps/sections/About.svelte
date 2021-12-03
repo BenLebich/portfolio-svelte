@@ -1,7 +1,6 @@
 <script>
   export let y;
   export let innerWidth;
-  $: console.log(innerWidth);
   let leftLight = 0;
   let leftDark = 0;
 

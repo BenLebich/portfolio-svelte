@@ -11,10 +11,11 @@
 </script>
 
 <main>
-	<Nav innerWidth={innerWidth}/>
+	<Nav y={y} />
 	<Hero />
 	<About y={y} innerWidth={innerWidth}/>
 	<Career innerWidth={innerWidth}/>
+	<Projects y={y} innerWidth={innerWidth}/>
 </main>
 
 <svelte:window bind:scrollY={y} bind:innerWidth={innerWidth}/>
