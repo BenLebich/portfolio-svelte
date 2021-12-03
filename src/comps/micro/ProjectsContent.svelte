@@ -1,13 +1,6 @@
 <script>
   import SectionTitle from "./SectionTitle.svelte";
 
-  function stretch(node, { width }) {
-    console.log(width);
-    return {
-      duration: "1000",
-      css: (t) => `width: ${width}`,
-    };
-  }
 
   let cardWidths = [5, 5, 5];
 

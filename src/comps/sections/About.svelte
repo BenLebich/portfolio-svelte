@@ -288,7 +288,7 @@
   .content {
     text-align: center;
     background-color: #dd6031;
-    padding: 200px 100px;
+    padding: 200px 0px;
   }
 
   .bottom {

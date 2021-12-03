@@ -16,6 +16,7 @@
 	<About y={y} innerWidth={innerWidth}/>
 	<Career innerWidth={innerWidth}/>
 	<Projects y={y} innerWidth={innerWidth}/>
+	<Contact y={y} innerWidth={innerWidth}/>
 </main>
 
 <svelte:window bind:scrollY={y} bind:innerWidth={innerWidth}/>

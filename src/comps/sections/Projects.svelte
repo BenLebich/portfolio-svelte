@@ -111,7 +111,7 @@
     .content {
       text-align: center;
       background-color: #E2E2E2;
-      padding: 100px 100px;
+      padding: 100px 0px 0px 0px;
     }
 
   

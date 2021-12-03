@@ -168,10 +168,10 @@
   }
 
   .title {
-      font-size: 30px;
+      font-size: 26px;
       background-color: #171717;
       color: #ffffff;
-      line-height: 20px;
+      line-height: 16px;
       width: fit-content;
 
   }
