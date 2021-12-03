@@ -22,7 +22,5 @@
 <svelte:window bind:scrollY={y} bind:innerWidth={innerWidth}/>
 
 <style>
-	main {
-		height: 10000px;
-	}
+
 </style>

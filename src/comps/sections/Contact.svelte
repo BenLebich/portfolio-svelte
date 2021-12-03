@@ -168,9 +168,7 @@
     .content {
       text-align: center;
       background-color: #dd6031;
-      padding: 100px 0px;
+      padding: 100px 0px 0px 0px;
     }
-
-  
   </style>
   
