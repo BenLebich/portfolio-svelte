@@ -1,11 +1,9 @@
 <script>
-  let year = 2021;
+  let year = new Date().getFullYear();
 </script>
 
 <footer>
-  <div class="footer">
     © {year} | Built and Designed by Ben Lebich
-  </div>
 </footer>
 
 <style>

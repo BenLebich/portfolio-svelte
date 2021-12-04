@@ -1,6 +1,7 @@
 <script>
   import { slide } from "svelte/transition";
-  //export let innerWidth;
+  import * as animateScroll from "svelte-scrollto";
+
   export let y;
   export let innerWidth;
   let hover = false;
@@ -13,10 +14,20 @@
   }
 
   let selected = "Home";
-  let sections = ["Home", "About", "Career", "Project", "Contact"];
+  let sections = ["Home", "About", "Career", "Projects", "Contact"];
 
   function handleClick(e) {
+    let nSelected = sections[e.target.getAttribute("data-idx")]
+    if (hover) {
+      if (nSelected == "Home") {
+        animateScroll.scrollToTop({duration: 200, offset: -50})
+      } else {
+        animateScroll.scrollTo({element: `#${nSelected.toLowerCase()}`, duration: 200, offset: -50})
+      }
+    }
+    
     selected = sections[e.target.getAttribute("data-idx")];
+    
   }
 
   function click(e) {
@@ -114,7 +125,7 @@
   .menu {
     display: flex;
     flex-direction: row;
-    margin-left: -100px;
+    margin-left: -103px;
     margin-top: 30px;
     z-index: 5;
     align-items: flex-start;
@@ -125,7 +136,7 @@
     background-color: #ffffff88;
     display: flex;
     flex-direction: column;
-    max-width: 100px;
+    max-width: 103px;
     height: 100%;
   }
 

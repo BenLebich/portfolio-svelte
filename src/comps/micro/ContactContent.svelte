@@ -2,7 +2,7 @@
   import SectionTitle from "./SectionTitle.svelte";
 </script>
 
-<SectionTitle title="Contact" />
+<SectionTitle title="Contact"/>
 <div class="content">
   <form>
     <div>
