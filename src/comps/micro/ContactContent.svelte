@@ -38,8 +38,7 @@
     text-transform: uppercase;
   }
   input:focus,
-  textarea:focus,
-  select:focus {
+  textarea:focus{
     outline: none;
   }
   input, textarea {

@@ -2,15 +2,16 @@
   import { slide } from "svelte/transition";
   //export let innerWidth;
   export let y;
-  let heightArrow = 190;
+  export let innerWidth;
   let hover = false;
-  
-  let h = 0;
-  $: if (!hover) {
-    heightArrow = 25;
+  let yMin = 30;
+
+  $: if (innerWidth > 775) {
+    yMin = 60
   } else {
-    heightArrow = 190;
+    yMin = 30;
   }
+
   let selected = "Home";
   let sections = ["Home", "About", "Career", "Project", "Contact"];
 
@@ -18,17 +19,10 @@
     selected = sections[e.target.getAttribute("data-idx")];
   }
 
-  function enter(e) {
-    hover = true;
-  }
-
-  function leave(e) {
-    hover = false;
-  }
-
   function click(e) {
     hover = !hover;
   }
+
 </script>
 
 <header class="container">
@@ -36,15 +30,13 @@
   <div>
     <div
       class="menu"
-      style="{(y < 30) ? "" : "position: fixed; margin-top: -30px;"}"
-      on:mouseenter={enter}
-      on:mouseleave={leave}
+      style={y < yMin ? "" : " position: fixed; margin-top: -30px;"}
       on:click={click}
     >
-      <div class="sections" bind:clientHeight={h}>
+      <div class="sections">
         {#each sections as section, idx}
           {#if section === selected}
-            <div 
+            <div
               on:click={handleClick}
               data-idx={idx}
               class="{section.toLowerCase()} {section === selected
@@ -52,6 +44,18 @@
                 : ''}"
             >
               {section}
+
+              {#if hover === false}
+                <svg
+                  width="9"
+                  height="7"
+                  viewBox="0 0 9 7"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M4.5 7L0.602886 0.25H8.39711L4.5 7Z" fill="white" />
+                </svg>
+              {/if}
             </div>
           {:else if hover}
             <div
@@ -63,12 +67,21 @@
                 : ''}"
             >
               {section}
+              {#if hover === true && idx === 0 && false}
+                <svg
+                  width="9"
+                  height="7"
+                  viewBox="0 0 9 7"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M4.5 7L0.602886 0.25H8.39711L4.5 7Z" fill="black" />
+                </svg>
+              {/if}
             </div>
           {/if}
         {/each}
       </div>
-
-     
     </div>
   </div>
 </header>
@@ -101,16 +114,19 @@
   .menu {
     display: flex;
     flex-direction: row;
-    margin-left: -87px;
+    margin-left: -100px;
+    margin-top: 30px;
     z-index: 5;
     align-items: flex-start;
+    position: absolute;
   }
 
   .sections {
     background-color: #ffffff88;
     display: flex;
     flex-direction: column;
-    width: 87px;
+    max-width: 100px;
+    height: 100%;
   }
 
   .sections div {
@@ -131,7 +147,11 @@
 
   @media only screen and (max-width: 775px) {
     .main-logo {
-      max-width: 200px;
+      max-width: 185px;
+    }
+
+    .menu {
+      margin-top: 0px;
     }
   }
 </style>
