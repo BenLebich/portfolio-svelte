@@ -23,9 +23,6 @@
     </div>
     <input type="submit" value="Submit">
   </form>
-  <div class="footer">
-    © Built and Designed by Ben Lebich
-  </div>
 </div>
 
 <style>
@@ -61,12 +58,6 @@
     text-transform: uppercase;
     background-color: #171717;
     font-size: 30px;
-  }
-
-  .footer {
-    padding-top: 100px;
-    padding-bottom: 10px;
-    color: white;
   }
 
   @media only screen and (max-width: 1500px) {

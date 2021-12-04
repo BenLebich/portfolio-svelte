@@ -30,7 +30,7 @@
   <div>
     <div
       class="menu"
-      style={y < yMin ? "" : " position: fixed; margin-top: -30px;"}
+      style={y < yMin ? "" : " position: fixed; margin-top: -30px; margin-right: 2px;"}
       on:click={click}
     >
       <div class="sections">

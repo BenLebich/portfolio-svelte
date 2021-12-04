@@ -6,6 +6,7 @@
 	import Career from './comps/sections/Career.svelte';
 	import Projects from './comps/sections/Projects.svelte';
 	import Contact from './comps/sections/Contact.svelte';
+	import Footer from './comps/sections/Footer.svelte';
 	let y = 0;
 	let innerWidth = 0;
 </script>
@@ -17,6 +18,7 @@
 	<Career innerWidth={innerWidth}/>
 	<Projects y={y} innerWidth={innerWidth}/>
 	<Contact y={y} innerWidth={innerWidth}/>
+	<Footer />
 </main>
 
 <svelte:window bind:scrollY={y} bind:innerWidth={innerWidth}/>
