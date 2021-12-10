@@ -10,6 +10,43 @@
   } else {
     heightArrow = 700;
   }
+
+  let events = [
+    {
+      range: "Jun - Jul 2016",
+      title: "Wordpress Intern",
+      place: "RPM National",
+      desc: "Leanred how to build WordPress sites.",
+      skills: ["WordPress", "HTML", "CSS"]
+    },
+    {
+      range: "Sep 2017 - Jan 2019",
+      title: "Wordpress Intern",
+      place: "SMC National",
+      desc: "Built WordPress sites for clients and rebuilt the theme options.",
+      skills: ["WordPress", "PHP", "JavaScript"]
+    },
+    {
+      range: "Sep 2017 - May 2020",
+      title: "Computer Science Student",
+      place: "Sierra College",
+      desc: "Completed all computer science related classes required for Computer Science for Transfer",
+      skills: ["Java", "Discrete Structures", "Assembly Language", "C", "Unix/Linux", "Calculus II", "Physics II"]
+    },
+    {
+      range: "Jan 2019 - Current",
+      title: "Lead Developer",
+      place: "SMC National",
+      desc: "Lead the development of a lead to patient tracking application.",
+      skills: ["PHP", "MySQL", "jQuery", "Node.js", "MongoDB"]
+    }
+  ];
+
+  function formatEvent(event, i) {
+    return `
+
+    `
+  }
 </script>
 
 <div class="container">
@@ -19,17 +56,19 @@
   <div class="content">
     <div class="left">
         <div class="event ev-1">
-            <div class="range">Jun - Jul 2016</div>
-            <div class="title">Wordpress Intern</div>
-            <div class="place">RPM National</div>
-            <div class="desc">Leanred how to build WordPress sites.</div>
+            <div class="range">{events[0].range}</div>
+            <div class="title">{events[0].title}</div>
+            <div class="place">{events[0].place}</div>
+            <div class="desc">{events[0].desc}</div>
+            <div class="desc">[{events[0].skills.join(", ")}]</div>
         </div>
         <div class="event ev-3">
-            <div class="range">Sep 2017 - May 2020</div>
-            <div class="title">Computer Science Student</div>
-            <div class="place">Sierra College</div>
-            <div class="desc">Leanred how to build WordPress sites.</div>
-        </div>
+          <div class="range">{events[2].range}</div>
+          <div class="title">{events[2].title}</div>
+          <div class="place">{events[2].place}</div>
+          <div class="desc">{events[2].desc}</div>
+          <div class="desc">[{events[2].skills.join(", ")}]</div>
+      </div>
     </div>
     <div class="arrow-desktop">
       <svg
@@ -50,16 +89,18 @@
     </div>
     <div class="right">
         <div class="event ev-2">
-            <div class="range">Sep 2017 - JAN 2019</div>
-            <div class="title">Wordpress Developer</div>
-            <div class="place">SMC National</div>
-            <div class="desc">Built WordPress sites for clients and rebuilt the theme options.</div>
+          <div class="range">{events[1].range}</div>
+          <div class="title">{events[1].title}</div>
+          <div class="place">{events[1].place}</div>
+          <div class="desc">{events[1].desc}</div>
+          <div class="desc">[{events[1].skills.join(", ")}]</div>
         </div>
-        <div class="event ev-4">
-            <div class="range">Jan 2019 - Current</div>
-            <div class="title">Lead Developer</div>
-            <div class="place">SMC National</div>
-            <div class="desc">Lead the development of a lead to patient tracking application.</div>
+        <div class="event ev-3">
+          <div class="range">{events[3].range}</div>
+          <div class="title">{events[3].title}</div>
+          <div class="place">{events[3].place}</div>
+          <div class="desc">{events[3].desc}</div>
+          <div class="desc">[{events[3].skills.join(", ")}]</div>
         </div>
     </div>
   </div>
@@ -84,28 +125,32 @@
     </div>
     <div class="events">
         <div class="event ev-1">
-            <div class="range">Jun - Jul 2016</div>
-            <div class="title">Wordpress Intern</div>
-            <div class="place">RPM National</div>
-            <div class="desc">Leanred how to build WordPress sites.</div>
+          <div class="range">{events[0].range}</div>
+          <div class="title">{events[0].title}</div>
+          <div class="place">{events[0].place}</div>
+          <div class="desc">{events[0].desc}</div>
+          <div class="desc">[{events[0].skills.join(", ")}]</div>
         </div>
         <div class="event ev-2">
-            <div class="range">Sep 2017 - JAN 2019</div>
-            <div class="title">Wordpress Developer</div>
-            <div class="place">SMC National</div>
-            <div class="desc">Built WordPress sites for clients and rebuilt the theme options.</div>
+          <div class="range">{events[1].range}</div>
+          <div class="title">{events[1].title}</div>
+          <div class="place">{events[1].place}</div>
+          <div class="desc">{events[1].desc}</div>
+          <div class="desc">[{events[1].skills.join(", ")}]</div>
         </div>
         <div class="event ev-3">
-            <div class="range">Sep 2017 - May 2020</div>
-            <div class="title">Computer Science</div>
-            <div class="place">Sierra College</div>
-            <div class="desc">Leanred how to build WordPress sites.</div>
+          <div class="range">{events[2].range}</div>
+          <div class="title">{events[2].title}</div>
+          <div class="place">{events[2].place}</div>
+          <div class="desc">{events[2].desc}</div>
+          <div class="desc">[{events[2].skills.join(", ")}]</div>
         </div>
         <div class="event ev-4">
-            <div class="range">Jan 2019 - Current</div>
-            <div class="title">Lead Developer</div>
-            <div class="place">SMC National</div>
-            <div class="desc">Lead the development of a lead to patient tracking application.</div>
+          <div class="range">{events[3].range}</div>
+          <div class="title">{events[3].title}</div>
+          <div class="place">{events[3].place}</div>
+          <div class="desc">{events[3].desc}</div>
+          <div class="desc">[{events[3].skills.join(", ")}]</div>
         </div>
     </div>
   </div>

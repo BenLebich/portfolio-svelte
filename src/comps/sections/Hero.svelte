@@ -1,5 +1,5 @@
 <section>
-    “If Elon can make a car drive itself, I can make a todo app”
+    <mark class="highlight">Web Developer</mark>
 </section>
 
 
@@ -18,5 +18,12 @@
       padding: 0px 20px;
       font-size: 40px;
     }
+  }
+
+  .highlight {
+    background-color:#dd603144;
+    line-height: 5px;
+    padding: 0px;
+    height: 5px;
   }
 </style>
