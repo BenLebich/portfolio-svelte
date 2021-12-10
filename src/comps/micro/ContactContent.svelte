@@ -21,6 +21,7 @@
       <label for="Message">Message</label><br />
       <textarea id="Phone" name="Message" value="" />
     </div>
+    <input type="hidden" name="form-name" value="contact" />
     <input type="submit" value="Submit">
   </form>
 </div>
