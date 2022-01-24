@@ -3,8 +3,8 @@
 </script>
 
 <SectionTitle title="Contact"/>
-<div class="content" name="contact" method="POST" data-netlify="true">
-  <form>
+<div class="content">
+  <form name="contact" method="POST" data-netlify="true">
     <div>
       <label for="name">Name</label><br />
       <input type="text" id="name" name="name" value="" />
