@@ -15,7 +15,7 @@
   
   <section>
     <div class="mountains">
-        <div class="range lighter" style="margin-left: -{leftLight - 7000}px">
+        <div class="range lighter" style="margin-left: -{leftLight - 6000}px">
           <svg
             width="2500"
             height="382"
@@ -73,7 +73,7 @@
             </svg>
           {/if}
         </div>
-        <div class="range darker" style="margin-left: {leftDark - 7000}px; z-index: 2;">
+        <div class="range darker" style="margin-left: {leftDark - 6000}px; z-index: 2;">
           <svg
             width="2500"
             height="382"
