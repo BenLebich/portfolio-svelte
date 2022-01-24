@@ -3,7 +3,7 @@
 </script>
 
 <footer>
-    © {year} | Built and Designed by Ben Lebich
+    © {year} | Designed and Built by Ben Lebich
 </footer>
 
 <style>
