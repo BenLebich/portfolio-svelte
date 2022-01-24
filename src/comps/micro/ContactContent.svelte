@@ -4,7 +4,7 @@
 
 <SectionTitle title="Contact"/>
 <div class="content">
-  <form name="contact" method="POST" data-netlify="true" netlify>
+  <form name="contact" method="post">
     <div>
       <label for="name">Name</label><br />
       <input type="text" id="name" name="name" value="" />
