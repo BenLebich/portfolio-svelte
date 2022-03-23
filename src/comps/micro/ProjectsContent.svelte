@@ -80,31 +80,9 @@
           <a class="link" href={proj.link} target="_blank"> View Project </a>
         </div>
         <div class="triangle">
-          <svg
-            preserveAspectRatio="none"
-            width="18"
-            height="157"
-            viewBox="0 0 18 157"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M18 78.5L0.75 156.875L0.75 0.124702L18 78.5Z"
-              fill="white"
-            />
-          </svg>
         </div>
         <div class="trimobile">
-          <svg
-            preserveAspectRatio="none"
-            width="157"
-            height="18"
-            viewBox="0 0 157 18"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M78.5 18L156.875 0.75H0.124702L78.5 18Z" fill="white" />
-          </svg>
+          
         </div>
         <div class="img">
           <img src={proj.img} alt="{proj.name} Screenshot" />
