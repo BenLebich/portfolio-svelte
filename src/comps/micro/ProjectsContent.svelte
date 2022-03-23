@@ -150,13 +150,6 @@
     object-fit: cover;
   }
 
-  .card .triangle svg {
-    height: 100%;
-    width: 37px;
-    z-index: 3;
-    margin-right: -35px;
-  }
-
   .card .triangle {
     z-index: 3;
   }
@@ -164,10 +157,6 @@
   .card .trimobile {
     z-index: 3;
     display: none;
-  }
-
-  .card .trimobile svg {
-    z-index: 3;
   }
 
   .card:nth-child(even) {
@@ -216,12 +205,6 @@
 
     .card .trimobile {
       display: block;
-    }
-
-    .card .trimobile svg {
-      width: 100%;
-      height: 37px;
-      margin-bottom: -52px;
     }
 
     .card .triangle {
