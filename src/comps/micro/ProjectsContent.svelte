@@ -11,6 +11,14 @@
       stack: ["PHP", "jQuery", "Node.js", "Mongodb", "Aptible"]
     },*/
     {
+      name: "Millsaw Construction",
+      desc: `Rebuild for a general contracter. Previously it used Elementor and
+      had minimal design consitency. It needed a face lift to something more modern.`,
+      link: "https://millsawconstruction.com",
+      img: "/images/project-1.png",
+      stack: ["Next.js", "Swiper.js", "Netlify"],
+    },
+    {
       name: "Danny Matthews",
       desc: `Build for a Videographer. This was my first time building a horizontal sliding website and second time using Svelte.`,
       link: "https://dannymatthews.net/",
@@ -24,14 +32,6 @@
       link: "https://seaweedtechnologies.no/",
       img: "/images/project-4.png",
       stack: ["WordPress", "Elementor"],
-    },
-    {
-      name: "Millsaw Construction",
-      desc: `Rebuild for a general contracter. Previously it used Elementor and
-      had minimal design consitency. It needed a face lift to something more modern.`,
-      link: "https://eloquent-heyrovsky-2eae78.netlify.app/",
-      img: "/images/project-1.png",
-      stack: ["Next.js", "Swiper.js", "Netlify"],
     },
     {
       name: "Avfallsplassen",
@@ -63,7 +63,7 @@
 <SectionTitle title="Projects" />
 <div class="content">
   <div class="cards">
-    {#each projects as proj, i}
+    {#each projects as proj}
       <div class="card">
         <div class="info">
           <div class="name">
@@ -121,7 +121,7 @@
     background-color: #dd6031;
     width: 350px;
     color: white;
-    font-size: 25px;
+    font-size: 22px;
     margin-left: -65px;
     line-height: 30px;
   }

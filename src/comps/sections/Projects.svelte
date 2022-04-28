@@ -9,7 +9,7 @@
   
     let widths = 20;
     $: widths = Math.round(y / 10);
-    import ProjectsContent from '../micro/ProjectsContent.svelte';
+    import ProjectsContent from '../micro/ProjectsContentV2.svelte';
   
   </script>
   
