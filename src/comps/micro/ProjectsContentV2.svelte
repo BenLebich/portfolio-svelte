@@ -95,11 +95,17 @@ import { prop_dev } from "svelte/internal";
             </p>
           </div>
           <img src={proj.img} alt="{proj.name} Screenshot" />
-          <h5 class="read" on:click={() => {proj.read = !proj.read}}>Read More</h5>
+          <h5 class="read" on:click={() => {proj.read = !proj.read}}>
+            {#if proj.read}
+              Read Less
+            {:else}
+              Read More
+            {/if}
+          </h5>
           {#if proj.link}
             <a href={proj.link} target="_blank">
               <h5 class="learn">
-                Learn More <svg
+                View Project <svg
                   width="22"
                   height="8"
                   viewBox="0 0 22 8"
@@ -143,7 +149,8 @@ import { prop_dev } from "svelte/internal";
     margin-bottom: 0px;
     background-color: #171717;
     color: #fff;
-    padding: 5px 10px;
+    text-transform: uppercase;
+    padding: 0px 5px;
   }
 
   .info .name {
@@ -183,7 +190,8 @@ import { prop_dev } from "svelte/internal";
     left: 0px;
     right: 0px;
     bottom: 0px;
-    background-color: #171717;
+    background: #171717;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(23,23,23,1) 100%);
     opacity: 0.2;
     
   }
@@ -192,14 +200,18 @@ import { prop_dev } from "svelte/internal";
     position: absolute;
     top: -100%;
     visibility: hidden;
-    height: 100%;
     transition: all 300ms ease;
     background-color: #fff;
+    margin: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.14);
   }
 
   .desc p {
     padding: 30px;
     font-size: 20px;
+    margin-bottom: 0px;
+    text-align: left;
+
   }
 
   .showdesc {
