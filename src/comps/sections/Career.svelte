@@ -46,7 +46,7 @@
       skills: ["PHP", "MySQL", "jQuery", "Node.js", "MongoDB"]
     },
     {
-      range: "Jan 2020 - Current",
+      range: "Jan 2021 - Current",
       title: "Software Engineer",
       place: "One Day Doors & Closets",
       desc: "Maintaining the main marketing website for 30+ dealers.",
